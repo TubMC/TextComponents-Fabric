@@ -29,6 +29,7 @@ import net.minecraft.text.HoverEvent.ItemStackContent;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.text.TextColor;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
@@ -84,7 +85,8 @@ abstract class AbstractBaseFabricComponent implements ImplementationComponentBas
 	 */
 	@Override
 	public final @Nullable Color getColor() {
-		return new Color(this.internal.getStyle().getColor().getRgb());
+		if (this.internal.getStyle().getColor() == null) return null;
+		return Color.decode(this.internal.getStyle().getColor().getHexCode());
 	}
 	/**
 	 * {@inheritDoc}
@@ -95,7 +97,7 @@ abstract class AbstractBaseFabricComponent implements ImplementationComponentBas
 			this.internal.setStyle(this.internal.getStyle().withColor((Formatting)null));
 			return;
 		}
-		this.internal.setStyle(this.internal.getStyle().withColor(newColor.getRGB()));
+		this.internal.setStyle(this.internal.getStyle().withColor(TextColor.parse('#' + Integer.toHexString(newColor.getRGB()).substring(2))));
 	}
 	/**
 	 * {@inheritDoc}
