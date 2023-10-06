@@ -10,8 +10,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.tubmc.text.definables.IForceableScoreTextContent;
 
-import net.minecraft.command.EntitySelector;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.text.ScoreTextContent;
 
 /**
  *    Copyright 2023 TubMC.com
@@ -28,7 +28,7 @@ import net.minecraft.server.command.ServerCommandSource;
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-@Mixin(EntitySelector.class)
+@Mixin(ScoreTextContent.class)
 public class ScoreTextContextMixin implements IForceableScoreTextContent {
 	
 	@Unique
