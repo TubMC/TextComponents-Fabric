@@ -1,0 +1,6 @@
+accessWidener v2 named
+
+accessible field net/minecraft/text/MutableText content Lnet/minecraft/text/TextContent;
+mutable field net/minecraft/text/MutableText content Lnet/minecraft/text/TextContent;
+accessible field net/minecraft/text/ScoreTextContent selector Lnet/minecraft/command/EntitySelector;
+mutable field net/minecraft/text/ScoreTextContent selector Lnet/minecraft/command/EntitySelector;
