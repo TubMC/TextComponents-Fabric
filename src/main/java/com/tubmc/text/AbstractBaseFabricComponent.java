@@ -2,6 +2,7 @@ package com.tubmc.text;
 
 import java.awt.Color;
 import java.util.Collection;
+import java.util.List;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 import org.jetbrains.annotations.NotNull;
@@ -63,7 +64,7 @@ abstract class AbstractBaseFabricComponent implements ImplementationComponentBas
 	@Override
 	public final @Nullable Collection<@NotNull IComponent> getChildren() {
 		if (this.internal.getSiblings() == null || this.internal.getSiblings().isEmpty()) {
-			return null;
+			return List.of();
 		}
 		return this.internal.getSiblings().stream().map(FabricTextImplemenation::wrapComponent).toList();
 	}
