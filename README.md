@@ -8,7 +8,8 @@ The following methods are added to all IComponents in this implementation:
 
 | Name     | Parameters    | Return Type   | Function                                          |
 |----------|---------------|---------------|---------------------------------------------------|
-
+| [sendTo](https://github.com/TubMC/TextComponents-Fabric/blob/master/src/main/java/com/tubmc/text/ImplementationSpecificComponentMethods.java#L35)   | PlayerEntity |               | Sends the component to the provided player |
+| [toFabric](https://github.com/TubMC/TextComponents-Fabric/blob/master/src/main/java/com/tubmc/text/ImplementationSpecificComponentMethods.java#L39) |               | Text | Converts the component into Text       |
 
 ## Installation
 
